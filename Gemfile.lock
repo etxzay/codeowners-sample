@@ -1,7 +1,7 @@
 PATH
   remote: /Users/pasha/Dev/toptal/codeowners-checker
   specs:
-    codeowners-checker (1.1.0)
+    codeowners-checker (1.1.1)
       fuzzy_match (~> 2.1)
       git (~> 1.5)
       json (~> 2.1)
@@ -12,10 +12,15 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    faraday (1.0.0)
+      multipart-post (>= 1.2, < 3)
     fuzzy_match (2.1.0)
-    git (1.5.0)
+    git (1.6.0)
+      rchardet (~> 1.8)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -23,13 +28,22 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.1009)
+    multipart-post (2.1.1)
     netrc (0.11.0)
+    octokit (4.16.0)
+      faraday (>= 0.9)
+      sawyer (~> 0.8.0, >= 0.5.3)
     pathspec (0.2.1)
+    public_suffix (4.0.3)
+    rchardet (1.8.0)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    sawyer (0.8.2)
+      addressable (>= 2.3.5)
+      faraday (> 0.8, < 2.0)
     thor (0.20.3)
     unf (0.1.4)
       unf_ext
@@ -40,6 +54,7 @@ PLATFORMS
 
 DEPENDENCIES
   codeowners-checker!
+  octokit (~> 4.0)
 
 BUNDLED WITH
    1.17.2
